@@ -20,18 +20,18 @@ The code will incorporate various datasets from different electricity providers,
 
 Check out the code for EPC file for some basics on how would the algorythm work. The output should look like this:
 
-# mockup for EPC
+#mockup for EPC
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Contract data of different providers
+#Contract data of different providers
 contract_data = [
     {"provider": "Fortum", "price": 0.11, "duration": 12, "production_type": 0, "max_consumption": 1000},
     {"provider": "Helen", "price": 0.10, "duration": 6, "production_type": 1, "max_consumption": 800},
     {"provider": "Väre", "price": 0.09, "duration": 24, "production_type": 2, "max_consumption": 750}
 ]
 
-# User preferences
+#User preferences
 user_preferences = {
     "max_price": 0.09,
     "duration": 12,
@@ -39,7 +39,7 @@ user_preferences = {
     "max_consumption": 900
 }
 
-# Function to calculate points
+#Function to calculate points
 def calculate_points(contract, user_prefs):
     points = 0
 
@@ -59,7 +59,7 @@ def calculate_points(contract, user_prefs):
 
     return points
 
-# Find the best contract
+#Find the best contract
 def find_best_contract(contracts, user_prefs):
     best_contract = None
     best_points = -1
@@ -72,21 +72,21 @@ def find_best_contract(contracts, user_prefs):
 
     return best_contract
 
-# Get the best contract
+#Get the best contract
 best_contract = find_best_contract(contract_data, user_preferences)
 
-# Create a dataframe for contract data
+#Create a dataframe for contract data
 df = pd.DataFrame(contract_data)
 
-# Display the contract data
+#Display the contract data
 print("Contract Data:")
 print(df)
 
-# Display the best provider
+#Display the best provider
 print("\nBest Provider:")
 print(f"Provider: {best_contract['provider']}, Price: {best_contract['price']}, Duration: {best_contract['duration']} months, Production Type: {best_contract['production_type']}, Max Consumption: {best_contract['max_consumption']} kW")
 
-# Plot the contract data
+#Plot the contract data
 plt.figure(figsize=(10, 6))
 plt.title("Electricity Contract Data")
 plt.bar(df["provider"], df["price"], color="lightblue")
@@ -95,7 +95,7 @@ plt.ylabel("Price (cents/kWh)")
 plt.xticks(rotation=15)
 plt.tight_layout()
 
-# Show the plot
+#Show the plot
 plt.show()
 
 
