@@ -18,7 +18,8 @@ The code will incorporate various datasets from different electricity providers,
 
 <img src="https://github.com/Agetso/Electricity-Price-Comparing/assets/149581762/3f3dc2f9-b3f5-41a4-abd9-b31f0bca2e3f" width="1000">
 
-Here's a simple part of code on how the algorythm would work: 
+Check out the code for EPC file for some basics on how would the algorythm work. The output should look like this:
+![image](https://github.com/Agetso/Electricity-Price-Comparing/assets/149581762/2e0a6407-0f74-41c5-bc3a-f1f511cccf20)
 
 
 ## Data sources and AI methods
